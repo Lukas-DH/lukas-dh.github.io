@@ -1,4 +1,4 @@
-### Visit my portforlio at [lukas-dh.github.io](lukas-dh.github.io)
+### Visit my portforlio at [lukas-dh.github.io](https://lukas-dh.github.io/)
 
 # Lukas' Project Portforlio Page
 Please visit my Github pages project portfolio. You can browse a selection of my projects that I have posed online, and you can even test some of the code out for yourself.
