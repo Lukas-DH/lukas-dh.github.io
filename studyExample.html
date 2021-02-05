@@ -1,0 +1,221 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.79.0">
+    <title>Starter Template · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/starter-template/">    
+
+    <!-- Bootstrap core CSS -->
+<!-- <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="https://github.com/Lukas-DH">Lukas-DH</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item active">
+          <a class="nav-link" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./about/About.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/Lukas-DH?tab=repositories">Repository</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Projects</a>
+          <ul class="dropdown-menu" aria-labelledby="dropdown01">
+            <li><a class="dropdown-item" href="#">Covid Particles</a></li>
+            <li><a class="dropdown-item" href="#">Pacman</a></li>
+            <li><a class="dropdown-item" href="#">Data Science</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+
+  
+  <div class="starter-template text-align py-5 px-3">
+    <h1 id="personalized-prediction-of-live-birth-a-machine-learning-method"><br>Personalized prediction of live birth: a machine learning method</h1>
+    <h3 id="abstract">Abstract</h3>
+    <h3 id="background-">Background:</h3>
+    <p>One in six couples worldwide experience some form of infertility problem at least once during their reproductive lifetime. There is roughly an equal distribution between men and women with known physiological causes of infertility with 10-20% being idiopathic. Lifestyle factors such as smoking, body weight and stress are associated with infertility.</p>
+    <h3 id="aim">Aim</h3>
+    <p>This study will prototype the development of a predictive tool which could be made available to the public to help quantify fertility success rates for patients and doctors. </p>
+    <h3 id="data-set-">Data Set:</h3>
+    <p>Clinical data of 6597 IVF Cycles was selected using the criteria in &quot;Data Inclusion/ Exclusion criteria&quot;. The data was chained for patient attempts at ART, meaning, one row of data represented one patient with multiple attempts at ART from fresh to frozen embryo transfers (ETs). See data dictionary for more information.</p>
+    <h5 id="data-set-inclusion-exclusion-criteria">Data set Inclusion/ Exclusion criteria</h5>
+    <ol>
+    <li>6597 Cycles</li>
+    <li>Women using own eggs</li>
+    <li>First OPU between 1/1/15 - 30/6/17</li>
+    <li>Subsequent OPUs as per point 2</li>
+    <li>Subsequent Cryos from points 2 and 3 between 1/1/15 - 31/12/18</li>
+    <li>All sites in BBS excluding RPA, NZ and satellite clinics</li>
+    <li>Oocyte Vit patients excluded</li>
+    <li>Cryo cycles were excluded if multiple embryos were transferred from multiple OPU cycles</li>
+    </ol>
+    <h3 id="methods">Methods</h3>
+    <p>from the clinical data of 6597 cycles there was a total of 46 variables. From these 46 only 4 where kept; age, amh levels, nth attempt at ART, body mass index (BMI). Fresh or Frozen was added by labelling a cycle &quot;Frozen&quot; if the number of Fresh livebirths was zero and if number of cryo embryo transfers was greater than zero, otherwise, it was considered &quot;Fresh&quot;. Finally, patients with missing AMH and BMI entries in the data where dropped, meaning that the total number of subjects used for analysis was reduced from 6597 to 2217 as seen in the results table below. The target variable in this analysis is live birth (LB) i.e. was there a live birth or was there not a live birth. A test for sample randomness was done to check whether dropping entries would statistically affect the outcome. A round of descriptive statistics was conducted to get a general understanding of the data. The data was input into the Machine learning models logistic regression (LR), random forest (RF), K-nearest neighbours (KNN), and decision tree DT classifiers. Model performance was assessed and compared using the ROC, accuracy, precision, recall, and f1 scores. The model parameters where turned and the feature importance/coefficients where extracted. And finally, model predictions where plotted and compared to learn about model behaviour. </p>
+    <h3 id="results-">Results:</h3>
+    <h4 id="statistical-significance-testing">Statistical significance testing</h4>
+    <p>descriptive statistics comparing no live birth to live birth patient groups shows that the categories age, n_eggs, amh, opu_rank, frozen_ET, and bmi have statistically significant differences across the 2 populations.</p>
+    <table>
+    <thead>
+    <tr>
+    <th style="text-align:left"></th>
+    <th style="text-align:right">count</th>
+    <th style="text-align:right">mean</th>
+    <th style="text-align:right">std</th>
+    <th style="text-align:right">count</th>
+    <th style="text-align:right">mean</th>
+    <th style="text-align:right">std</th>
+    <th style="text-align:right">2-tailed</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td style="text-align:left">age</td>
+    <td style="text-align:right">6556</td>
+    <td style="text-align:right">36.844</td>
+    <td style="text-align:right">4.504</td>
+    <td style="text-align:right">2217</td>
+    <td style="text-align:right">36.569</td>
+    <td style="text-align:right">4.552</td>
+    <td style="text-align:right">0.014</td>
+    </tr>
+    <tr>
+    <td style="text-align:left">n_eggs</td>
+    <td style="text-align:right">6556</td>
+    <td style="text-align:right">8.416</td>
+    <td style="text-align:right">5.408</td>
+    <td style="text-align:right">2217</td>
+    <td style="text-align:right">8.433</td>
+    <td style="text-align:right">5.376</td>
+    <td style="text-align:right">0.896</td>
+    </tr>
+    <tr>
+    <td style="text-align:left">amh</td>
+    <td style="text-align:right">2277</td>
+    <td style="text-align:right">20.461</td>
+    <td style="text-align:right">22.772</td>
+    <td style="text-align:right">2217</td>
+    <td style="text-align:right">20.543</td>
+    <td style="text-align:right">22.945</td>
+    <td style="text-align:right">nan</td>
+    </tr>
+    <tr>
+    <td style="text-align:left">opu_rank</td>
+    <td style="text-align:right">6556</td>
+    <td style="text-align:right">1.586</td>
+    <td style="text-align:right">0.947</td>
+    <td style="text-align:right">2217</td>
+    <td style="text-align:right">1.409</td>
+    <td style="text-align:right">0.721</td>
+    <td style="text-align:right">0</td>
+    </tr>
+    <tr>
+    <td style="text-align:left">bmi</td>
+    <td style="text-align:right">6411</td>
+    <td style="text-align:right">23.95</td>
+    <td style="text-align:right">4.336</td>
+    <td style="text-align:right">2217</td>
+    <td style="text-align:right">23.956</td>
+    <td style="text-align:right">4.226</td>
+    <td style="text-align:right">nan</td>
+    </tr>
+    <tr>
+    <td style="text-align:left">ago_or_ant</td>
+    <td style="text-align:right">6556</td>
+    <td style="text-align:right">0.806</td>
+    <td style="text-align:right">0.395</td>
+    <td style="text-align:right">2217</td>
+    <td style="text-align:right">0.814</td>
+    <td style="text-align:right">0.389</td>
+    <td style="text-align:right">0.439</td>
+    </tr>
+    <tr>
+    <td style="text-align:left">frozen_ET</td>
+    <td style="text-align:right">6556</td>
+    <td style="text-align:right">0.335</td>
+    <td style="text-align:right">0.472</td>
+    <td style="text-align:right">2217</td>
+    <td style="text-align:right">0.349</td>
+    <td style="text-align:right">0.477</td>
+    <td style="text-align:right">nan</td>
+    </tr>
+    </tbody>
+    </table>
+    <h4 id="trends-and-confidence-intervals">Trends and confidence intervals</h4>
+    <p>The descriptive analysis below quantifies these differences across the different variables. For age, mean live birth-rate (LB) decreases as age increases. For BMI, mean LB rate appears to only have negligible effects on LB from the range 18 to ca.26 where is starts to decrease. After a BMI of 30 the mean LB values have a wide confidence interval and become less reliable. For AMH, mean LB rate appears to increase from the range 0 to 30 and becomes less reliable to make a prediction after this point because the confidence intervals begin to increase. For opu_rank (number of attempts at ART), mean live birth rate appears to decrease after the first attempt. For Fresh vs frozen cycles, mean LB rates for frozen ETs are almost 3 x that of fresh.
+    <img src=.\images\baby_sen_figs\descriptive_analysis_final.png class="img-fluid" alt="Responsive image" width= 60%></p>
+    <h4 id="roc-curve-comparison">ROC curve comparison</h4>
+    <p>All ROC curve show an AUC score of between 0.75 and 0.77 indicating a moderate model performance.
+    <img src=.\images\baby_sen_figs\ROC_Curve_comparison_final.png class="img-fluid" alt="Responsive image" width= 60% ></p>
+    <h4 id="confusion-matrix-comparison">Confusion matrix comparison</h4>
+    <p>An analysis of the confusion matrices and the relevant scoring parameters shows that the LR classifier has the highest f1 and recall scores, while the RF has the highest Accuracy and precision scores.</p>
+    <p><img src=.\images\baby_sen_figs\Confusion_matrix_comparison_final2.png class="img-fluid" width= 60% alt="Responsive image"></p>
+    <h4 id="feature-importance">Feature importance</h4>
+    <p>Feature importance (for the tree-based models) and coefficient analysis (for the regression) shows the relative importance of each feature. Note that bmi is not showing as contributing to the model outcomes in the LR but shows some effect in the RF and DT. This may be due to the breakdown of LR classifiers for non-linear variables. Age, Freezing, and AMH can consistently be identified as the most important features in LB prediction.</p>
+    <p><img src=.\images\baby_sen_figs\feature_importance_coef_comparison_final.png class="img-fluid" width= 60% alt="Responsive image"></p>
+    <h4 id="comparison-of-model-output-topology">Comparison of model output topology</h4>
+    <p>Comparing model outputs against a new matrix of inputs i.e. to create plots of where 2 variables are changes in a stepwise way while holding the other constant, show how the different models would behave in the case of new input data.</p>
+    <p>The outputs are consistent with the descriptive statistics done in the section above. The main difference between that models is that the RF (tree based) and KNN (Euclidean distance based) models can account for non-linearities in variable effects on LB as see below when comparing the 2 sets of plots where BMI and AGE are held constant, respectively.</p>
+    <p><img src=.\images\baby_sen_figs\prediction_outputs_comparison2.png class="img-fluid" width= 60% alt="Responsive image"></p>
+    <p><img src=.\images\baby_sen_figs\prediction_outputs_comparison_bmi.png class="img-fluid" width= 60% alt="Responsive image"></p>
+    <h4 id="conclusions-">Conclusions:</h4>
+    <p>A prediction models based on regression, Trees and Euclidean distance was developed using <strong>age</strong>, <strong>AMH</strong>, <strong>BMI</strong>, <strong>attempts at IVF</strong> and <strong>Freeze ET</strong>. The study shows that model performance can be at least moderate for predicting LB and used as a visual tool to examine the effects on different variables on pregnancy and IVF treatment outcomes. This study might be a promising step to provide personalized estimates of the cumulative live birth chance of the first complete IVF cycle before treatment.</p>
+    
+  
+  </div>
+
+</main><!-- /.container -->
+
+
+    <!-- <script src="./assets/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+      
+  </body>
+</html>
+
