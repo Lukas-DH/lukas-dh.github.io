@@ -31,10 +31,10 @@ function clearAlert() {
 var beep = function() {
     var change = document.getElementById("toggle")
     if (count % 2 == 1) {
-        change.innerHTML = "Stop Beeps"
+        change.innerHTML = "Stop"
         playBeep()}
     if (count % 2 == 0) {
-        change.innerHTML = "start Beeps"
+        change.innerHTML = "Start"
         window.clearTimeout(timeoutID)
     }
 }

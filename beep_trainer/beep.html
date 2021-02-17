@@ -1,12 +1,110 @@
-<!DOCTYPE html>
-<html>
-    <!-- </script>     -->
-    <script src="beep.js"></script>    
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Hugo 0.79.0">
+        <title>Beep Trainer</title>
+    
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/starter-template/">  
+        <!-- <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/starter-template/">      -->
+    
+        <!-- Bootstrap core CSS -->
+    <!-- <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    
+        <style>
+          .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+          }
+    
+          @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+              font-size: 3.5rem;
+            }
+          }
+        </style>
+    
+        
+        <!-- Custom styles for this template -->
+        <link href="../portfolio/starter-template.css" rel="stylesheet">
+    </head>
 
-<body>
-    <button onclick="main()" id="toggle">Play Audio</button>
-    <input type="number" id="myMin" placeholder="min seconds" value=1>
-    <input type="number" id="myMax" placeholder="max seconds" value=6>
-</body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="https://github.com/Lukas-DH">Lukas-DH</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item active">
+                <a class="nav-link" aria-current="page" href="https://lukas-dh.github.io/">back to Home</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="./about/About.html">About</a>
+              </li> -->
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="https://github.com/Lukas-DH?tab=repositories">Repository</a>
+              </li> -->
+              <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Projects</a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                  <li><a class="dropdown-item" href="#">Covid Particles</a></li>
+                  <li><a class="dropdown-item" href="#">Pacman</a></li>
+                  <li><a class="dropdown-item" href="#">Data Science</a></li>
+                </ul>
+              </li> -->
+            </ul>
+            <!-- <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> -->
+          </div>
+        </div>
+      </nav>
+
+    <script src="beep.js"></script>
+    <main class="container">
+        <div class="starter-template text-center py-5 px-3">
+            <h1>Beep Reflex Trainer</h1>
+            <p class="lead">
+                <b>instructions</b>: Set the lower (min) and the upper (max) limits in the unput boxes provided below.<br>
+                You can also just keep the default values already provided. Happy training!
+            </p>
+            <!-- <div class="col-lg-4 col-lg-offset-4"> -->
+                <!-- <button onclick="main()" id="toggle" class="btn btn-outline-success">Play Audio</button> -->
+                <!-- <div class="input-group"> -->
+                    <body>
+                        
+                            <button onclick="main()" id="toggle" class="btn btn-outline-success">Start</button>
+                            <div class="starter-template text-center py-1 px-3"></div>
+                            <!-- <div class="jumbotron vertical-center"> -->
+                                <div class="d-flex justify-content-center">
+                                    <form>
+                                        <div class="form-row">
+                                        <div class="col">
+                                            <input  type="number" id="myMin" placeholder="min seconds" class="form-control" value=2>
+                                        </div>
+                                        <div class="col" style="width:50%;">
+                                            <input  type="number" id="myMax" placeholder="max seconds" class="form-control" value=6>
+                                        </div>                             
+                                        </div>
+                                    </form>
+                                </div>                                
+                            </div>
+                        <!-- </div> -->
+                    </body>
+                <!-- </div> -->
+            <!-- </div>     -->
+        </div>
+    </main>
 </html>
 
