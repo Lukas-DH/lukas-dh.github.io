@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Add a default marker</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
+<style>
+  body { margin: 0; padding: 0; }
+  #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+  .map-overlay{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+  }
+
+</style>
+</head>
+<body>
+
+<div id="map"></div>
+<div class="map-overlay">
+  <button style="font-size: 2em;" onclick="move()">
+    Lukas Running from Home to the river...>click here<
+  </button>
+</div>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoibHVrYXMtZGgiLCJhIjoiY2ttMjJtNGMwMDU4bjJxbnJzMzJrdW42NCJ9.srMNV3NUZpejEUsAuunpZQ'
+
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [2.33204682064558, 48.86696314060499],
+    zoom:13.5
+  });
+
+  var marker = new mapboxgl.Marker()
+    .setLngLat([2.336764521293573, 48.87400542536646])
+    .addTo(map)
+
+    const RunnerRoute = [
+      
+    [2.336764521293573, 48.87400542536646 ], 
+    [2.335348314959518, 48.87363848402368 ],
+    [ 2.3353912303029736, 48.87265055164658],
+    [ 2.334790415494587, 48.87149323462152],
+    [2.334232516029656, 48.87061817226868 ],
+    [ 2.333073801756338, 48.86948903694093],
+    [ 2.3323442409175823, 48.86813404091251],
+    [2.3315717647353704, 48.86658139618677 ],
+    [2.3310567806138955, 48.86576270956997 ],
+    [2.328953928784541, 48.86463346467236 ],
+    [2.3265506695509925, 48.8645205387811 ],
+    [2.3248769711562005, 48.86209257048502],
+    [ 2.324705309782375, 48.861132643552864]
+];
+
+var counter = 0;
+function move() {
+  setTimeout(() => {
+    if (counter >= RunnerRoute.length) return;
+    marker.setLngLat(RunnerRoute[counter])
+    counter++;
+    move();
+
+  },1000)
+}
+</script>
+</body>
+</html>
