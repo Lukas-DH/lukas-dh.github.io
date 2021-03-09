@@ -59,7 +59,10 @@
 var counter = 0;
 function move() {
   setTimeout(() => {
-    if (counter >= RunnerRoute.length) return;
+    if (counter >= RunnerRoute.length) {
+    counter = 0
+    marker.setLngLat([2.336764521293573, 48.87400542536646 ])
+    return}
     marker.setLngLat(RunnerRoute[counter])
     counter++;
     move();
