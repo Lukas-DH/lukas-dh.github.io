@@ -1,0 +1,73 @@
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
+<div id="map" style="width:1024px; height:768px"></div>
+
+<style>
+    .marker {
+  background-image: url('bus-icon.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+</style>
+
+<script>
+
+// let el = document.createElement('div');
+// //   el.className = 'marker';
+
+var busIcon = document.createElement('div');
+busIcon.classList.add("marker");
+
+mapboxgl.accessToken = 'pk.eyJ1Ijoic29mdGV4cGVyaW1lbnQiLCJhIjoiY2tjMngyZm9rMDFvajJzczJ3aWo0bnh6aiJ9.Bc_qK9Xf8SFBXkFM_x2gpg';
+
+// Load Light Styled Map
+var map = new mapboxgl.Map({
+	container: "map",
+	style: "mapbox://styles/mapbox/outdoors-v11",
+    
+	center: [-71.040081, 42.362554],
+	zoom: 12,
+});
+
+const busArray = [];
+
+function busColor() {
+	const randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+	return  randomColor}
+
+async function createMarkers(){
+    // get bus data    
+	const locations = await getBusLocations();
+	console.log(new Date());
+	console.log(locations);
+
+	locations.forEach(bus => {
+        if (!busArray[bus.id]) {
+            busArray[bus.id] = new mapboxgl.Marker({
+                element: busIcon,
+                color: busColor()})
+    }
+
+    busArray[bus.id]
+        .setLngLat([bus.attributes.longitude, bus.attributes.latitude])
+        .addTo(map)
+		console.log(bus.id)
+		console.log(bus.attributes.latitude)
+		console.log(bus.attributes.longitude)
+	});
+    setTimeout(() => createMarkers(), 3000);
+}
+
+async function getBusLocations(){
+	const url = 'https://api-v3.mbta.com/vehicles?filter[route]=1&include=trip';
+	const response = await fetch(url);
+	const json     = await response.json();
+	return json.data;
+}
+
+createMarkers()
+
+</script>
