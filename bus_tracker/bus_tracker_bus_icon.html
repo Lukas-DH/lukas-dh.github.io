@@ -4,7 +4,7 @@
 
 <style>
     .marker {
-  background-image: url('bus-icon.png');
+  background-image: url('bus-11.svg');
   background-size: cover;
   width: 50px;
   height: 50px;
@@ -17,9 +17,6 @@
 
 // let el = document.createElement('div');
 // //   el.className = 'marker';
-
-var busIcon = document.createElement('div');
-busIcon.classList.add("marker");
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoic29mdGV4cGVyaW1lbnQiLCJhIjoiY2tjMngyZm9rMDFvajJzczJ3aWo0bnh6aiJ9.Bc_qK9Xf8SFBXkFM_x2gpg';
 
@@ -44,11 +41,13 @@ async function createMarkers(){
 	console.log(new Date());
 	console.log(locations);
 
+
 	locations.forEach(bus => {
         if (!busArray[bus.id]) {
-            busArray[bus.id] = new mapboxgl.Marker({
-                element: busIcon,
-                color: busColor()})
+			var busIcon = document.createElement('div');
+			busIcon.classList.add("marker");
+            busArray[bus.id] = new mapboxgl.Marker(busIcon)
+			
     }
 
     busArray[bus.id]
