@@ -1,18 +1,23 @@
 <!doctype html>
 <html lang="en">
   <head>
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.79.0">
-    <title>Full Stack and Data</title>
+    <title>Carousel Template · Bootstrap v5.0</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/starter-template/">    
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+
+    
 
     <!-- Bootstrap core CSS -->
-<!-- <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+<!-- <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet"> -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<!-- <link href="cover.css" rel="stylesheet"> -->
+<link href="carousel.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -23,6 +28,24 @@
         user-select: none;
       }
 
+      body {
+    position: relative; 
+  }
+
+  .navbar {
+    margin-bottom: 0px;
+  }
+
+  .affix {
+    top:0;
+    width: 100%;
+    z-index: 9999 !important;
+  }
+  .affix ~ .container-fluid {
+   position: relative;
+   top: 50px;
+  }
+
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -32,68 +55,191 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="starter-template.css" rel="stylesheet">
+    <link href="carousel.css" rel="stylesheet">
+    <link href="cover.css" rel="stylesheet">
   </head>
-  <body>
+  <header>
+  <!-- <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Lukas-DH</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
     
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="https://github.com/Lukas-DH">Lukas-DH</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/Lukas-DH?tab=repositories">Repository</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#projects" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Projects</a>
+              <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                <li><a class="dropdown-item" href="#">Covid Particles</a></li>
+                <li><a class="dropdown-item" href="#">Pacman</a></li>
+                <li><a class="dropdown-item" href="#">Data Science</a></li>
+              </ul>
+            </li>
+          </ul> -->
+          <!-- <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form> -->
+        <!-- </div>
+      </div>
+    </nav>
+  </header> -->
 
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-      <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-item active">
-          <a class="nav-link" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./about/About.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/Lukas-DH?tab=repositories">Repository</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Projects</a>
-          <ul class="dropdown-menu" aria-labelledby="dropdown01">
-            <li><a class="dropdown-item" href="#">Covid Particles</a></li>
-            <li><a class="dropdown-item" href="#">Pacman</a></li>
-            <li><a class="dropdown-item" href="#">Data Science</a></li>
-          </ul>
-        </li>
-      </ul>
-      <!-- <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form> -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="https://lukas-dh.github.io/">Lukas-DH</a>
+      <!-- <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/Lukas-DH?tab=repositories">Repository</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item dropdown l-0" href="#">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false"></a>
+            <ul class="dropdown-menu" href="#projects" aria-labelledby="dropdown01">
+              <li><a class="dropdown-item" href="#">Covid Particles</a></li>
+              <li><a class="dropdown-item" href="#">Pacman</a></li>
+              <li><a class="dropdown-item" href="#">Data Science</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form> -->
+      </div>
     </div>
-  </div>
-</nav>
-
-<main class="container">
-
-  
-  <div class="starter-template text-center py-5 px-3">
-    <h1>Lukas' Portfolio</h1>
-    <p class="lead">I am medical device engineer and digital health developer. This page<br>
-      showcases a mix of learning and professional projects in web development using the MERN stack,<br>
-      and data analytics and machine learning using the Python programming language</p>
-      <p>
-        <a href=".\studyExample.html" class="btn btn-primary my-2">Data analytics</a>
-        <a href=".\pacman\index.html" class="btn btn-primary my-2">Fullstack development</a>
-        <a href=".\beep_trainer\beep.html" class="btn btn-primary my-2">Beep trainer</a>
-      </p> 
-       
-    <img src="./lukas.jpeg" />
-  
-  </div>
-
-</main><!-- /.container -->
+  </nav>
+</header>
+  <body>
 
 
-    <!-- <script src="./assets/dist/js/bootstrap.bundle.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <main >
+
+      <div class="pt-5 pb-5 d-flex h-100 text-center text-white bg-dark">
+        
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+          <div class="px-3">
+            <img src="./lukas32.jpg" width="380" class="rounded-circle img-fluid" alt="Responsive image" >
+            <h1>Lukas Stojanov<br><h2><span class="text-muted">Med Tech & Digital Health</span></h2>
+            <p class="lead">Welcome to my project portfolio and online resume! I am a digital health and medical device engineer and I specialise in the IVF industry. I am also an entrepreneur and full stack developer that is passionate about healthcare and helping small businesses owners.</p>
+              <p class="lead">
+                  <a href="#about" class="btn btn-lg fw-bold border-white bg-white">Learn more</a>
+              </p>
+            </div>
+        </div>
       
-  </body>
+      </div>
+
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing pt-3" id="about" >
+
+      <!-- <hr class="featurette-divider"> -->
+
+      <div class="row featurette pt-5">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Who's Lukas? <span class="text-muted">and what's he up to?</span></h2>
+          <p class="lead">Good Question! My focus has been expanding products to new sales regions,  building a post market service team, and creating a customer service experience that people love.But, my favourite part of the job has always to be working on the development of the products and the software, implementing new features and making improvements. The pandemic is forcing companies and people to accelerate the digital transformation of the economy. This is why I have decided to complement my engineering, business, and commercial skill set with a full stack development toolkit.
+            <a href="#projects"><span class="text-muted fw-bold">Check out some of my project and work below!</span></a></p>
+        </div>
+        <div class="col-md-5">
+          <img src="./lukas.jpeg" class="img-fluid" alt="Responsive image">
+          <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+          
+
+        </div>
+      </div>
+          
+      
+
+      <!-- Three columns of text below the carousel -->
+      
+      <div class="row" id="projects">
+        <hr class="featurette-divider">
+        <div class="pb-5 text-center">
+          <h1>Projects</h1>
+        </div>
+
+        <div class="col-lg-4">
+          <img src="./bus_tracker.jpeg" width="140" height="140" class=" img-thumbnail rounded-circle img-fluid" alt="Responsive image" >
+          <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+          <h2>Live Bus Tracker</h2>
+          <p>My favoiurite thing about programming and app development is the interface to things happening in the real-world. This project calls bus location data from the MBTA api and displayes it live on a map.</p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+          <img src="./pacman_sq.png" width="140" height="140" class=" img-thumbnail rounded-circle img-fluid" alt="Responsive image" >
+          <h2>Pacman</h2>
+          <p>Pacman is an oldie but a goldie. But this is Pacmen, this was an assignment that submitted during my studties at MIT. It manipulates the DOM using JavaScript and creates new objects which move on a page.</p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img src="./eyes.png" width="140" height="140" class=" img-thumbnail rounded-circle img-fluid" alt="Responsive image" >
+          
+          <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+
+          <h2>Eyes</h2>
+          <p>Another assignment that was competed during my study at MIT. This project also showcases my ability to work with the DOM and have it respond to external events and interactions like mouse movements.</p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+
+
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+
+
+      <!-- FOOTER -->
+      <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>&copy; 2017-2020 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+    </main>
+</body>
+
+<!-- <script src="../assets/dist/js/bootstrap.bundle.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+      
+  
 </html>
