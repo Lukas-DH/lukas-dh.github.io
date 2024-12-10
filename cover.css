@@ -2,7 +2,6 @@
  * Globals
  */
 
-
 /* Custom default button */
 .btn-secondaryC,
 .btn-secondaryC:hover,
@@ -10,7 +9,6 @@
   color: #333;
   text-shadow: none; /* Prevent inheritance from `body` */
 }
-
 
 /*
  * Base structure
@@ -25,22 +23,21 @@
   max-width: 42em;
 }
 
-
 /*
  * Header
  */
 
 .nav-mastheadC .nav-linkC {
-  padding: .25rem 0;
+  padding: 0.25rem 0;
   font-weight: 700;
-  color: rgba(255, 255, 255, .5);
+  color: rgba(255, 255, 255, 0.5);
   background-color: transparent;
-  border-bottom: .25rem solid transparent;
+  border-bottom: 0.25rem solid transparent;
 }
 
 .nav-mastheadC .nav-linkC:hover,
 .nav-mastheadC .nav-linkC:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
+  border-bottom-color: rgba(255, 255, 255, 0.25);
 }
 
 .nav-mastheadC .nav-link + .nav-link {
@@ -50,4 +47,11 @@
 .nav-masthead .active {
   color: #fff;
   border-bottom-color: #fff;
+}
+
+.my-custom-text {
+  max-width: 400px; /* Limits the width */
+  line-height: 1.6; /* Improves readability */
+  margin-top: 20px; /* Adds some space above */
+  margin-bottom: 20px; /* Adds some space below */
 }
